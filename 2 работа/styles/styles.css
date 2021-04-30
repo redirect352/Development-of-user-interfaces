@@ -1,0 +1,155 @@
+  
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+   
+    height: 100vh;
+    background-size: cover;
+    color: #000000;
+
+
+    transition: background-image 1s ease-in-out;
+    background-position: center center;
+
+  }
+  
+  .time {
+    font-size: 8rem;
+    /*background-color: rgba(0,0,0,.3);*/
+  
+  }
+
+  .all{
+    min-width: 500px;
+    margin-bottom: 1vh;
+    margin: 0 auto;
+    justify-content:  center;
+    text-align: center;
+    align-self: center;
+    align-items: center;
+    
+  }
+  h1 {
+    margin-bottom: 3rem;
+  }
+  
+  h2 {
+    margin-bottom: 0.5rem;
+    opacity: 0.8;
+  }
+  
+  @media (max-width: 700px) {
+    .time {
+      font-size: 6rem;
+    }
+  }
+
+  .Greet{
+    margin-bottom: 0.5rem;
+  }
+  .WeekDate{
+    margin-bottom: 0.5rem;
+  }
+  .weather{
+    margin-bottom: 0rem;
+  }
+
+  /*Pic change styles*/
+
+#btn {
+  width: 60px;
+  height: 60px;
+  border: 0;
+  background: url("https://www.pngarts.com/files/7/Update-Button-PNG-Image.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: grayscale(1);
+  margin: 10px;
+  
+    
+  align-self:flex-start;
+}
+#btn:hover {
+  filter: grayscale(.7);
+}
+
+
+
+#btn:active,
+#btn:focus {
+  outline: 0;
+}
+#btn:active{
+  transform: scale(1.02)
+}
+
+
+
+  /*quotes styles*/
+  .quote {
+
+    font: 1.5rem Georgia, serif;
+
+    /*background: #eee;*/
+    /*border: black 2px solid;*/
+    padding: .3em;
+    border-radius: 1em;
+    max-width: 60%;
+    margin-top:  auto;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+    
+    
+  }
+  .quote figcaption,
+  .quote blockquote {
+    margin: 1em;
+    transition: 1s linear;
+  }
+
+  .quote figcaption {
+    text-align: right;
+    
+  }
+
+
+  .Topbuttons{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: auto;
+    margin-right: auto;
+  }
+
+  #quote_btn {
+    width: 60px;
+    height: 60px;
+    border: 0;
+
+    background: url("https://www.pngarts.com/files/7/Update-Button-PNG-Background-Image.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: grayscale(.8);
+    margin: 10px;
+    align-self:flex-start;
+}
+  
+  #quote_btn:hover {
+    filter: grayscale(.2);
+  }
+  #quote_btn:active,
+  #quote_btn:focus {
+    outline: 0;
+  }
+  #quote_btn:active{
+    transform: scale(1.02)
+  }
