@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fancy Weather App</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/4ba75051f6.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
+  </head>
+
+  <body>
+    <main>
+      <div class="container">
+        <div class="overlay"></div>
+        <header class="header">
+          <div class="header_buttons">
+            <button class="button refresh" id = "refresh">
+              <i class="fas fa-sync-alt"></i>
+            </button>
+
+            <form>
+              <div class="radio-group">
+                <input
+                  type="radio"
+                  id="End_butt"
+                  name="selector"
+                  value="EN"
+                  checked
+                />
+                <label for="End_butt">Eng</label>
+                <input
+                  type="radio"
+                  id="Rus_butt"
+                  name="selector"
+                  value="RU"
+                />
+                <label for="Rus_butt">Rus</label>
+              </div>
+            </form>
+
+
+            <form>
+              <div class="radio-group">
+                <input
+                  type="radio"
+                  id="celsius"
+                  name="selector"
+                  value="celsius"
+                  checked
+                />
+                <label for="celsius">C&deg</label>
+                <input
+                  type="radio"
+                  id="farenheit"
+                  name="selector"
+                  value="farenheit"
+                />
+                <label for="farenheit">F&deg</label>
+              </div>
+            </form>
+          
+          
+            <div class="FindCity" id= "FindCity" contenteditable="true">Минск</div>
+          </button><button class="button button-search" type="submit" id = "search_button" >SEARCH</button> 
+
+          </div>
+
+          
+          
+        </header>
+
+          
+
+
+        <div class="info">
+          <div class="info-container">
+            <h1 class="HeaderFirst">
+              <span class="NameCity">_</span>
+              <span class="BeetwenCit">, </span>
+              <span class="Coyntry">_</span>
+            </h1>
+            <div class="date-time">
+              <div class="date"></div>
+              <div class="time"></div>
+            </div>
+            <div class="today-weather-container">
+              <div class="today-weather">
+                
+                <span class="temperature"></span>
+                <span class="IconTemp"></span>
+              </div>
+              <div class="today-weather">
+                <div class="icon"></div>
+                <div class="description"></div>
+                <div class="feels-like">
+                  <span class="Like_Temp"></span>
+                  <span class="LikeWinter"></span>
+                  <span class="IconTempN"></span>
+                </div>
+                <div class="wind">
+                  <span class="wind-text">Speed:</span>
+                  <span class="wind-speed"></span>
+                
+                </div>
+                <div class="humidity">
+                  <span class="humidity-text">Humidity:</span>
+                  <span class="humidity-value"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="info-container">
+            <div id="map"></div>
+            <div class="latitude">
+              <span class="lat-text"></span>
+              <span class="lat-value"></span>
+            </div>
+            <div class="longitude">
+              <span class="long-text"></span>
+              <span class="long-value"></span>
+            </div>
+          </div>
+        </div>
+        <div class="weather-forcast-container">
+          <div class="weather-forecast">
+            <div class="day1"></div>
+            <div class="temp1-full">
+              <span class="temp1"></span>
+              <span class="temp-type1"></span>
+            </div>
+            <div class="icon1"></div>
+          </div>
+          <div class="weather-forecast">
+            <div class="day2"></div>
+            <div class="temp2-full">
+              <span class="temp2"></span>
+              <span class="temp-type2"></span>
+            </div>
+            <div class="icon2"></div>
+          </div>
+          <div class="weather-forecast">
+            <div class="day3"></div>
+            <div class="temp3-full">
+              <span class="temp3"></span>
+              <span class="temp-type3"></span>
+            </div>
+            <div class="icon3"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
